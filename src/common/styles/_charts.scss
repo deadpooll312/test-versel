@@ -1,0 +1,68 @@
+//
+// Chart Sizes
+//
+
+$chart-height:                  350px !default;
+$chart-height-lg:               $chart-height * 1.2 !default;
+$chart-height-sm:               $chart-height * .6 !default;
+
+$max-gauge-chart-height:        $chart-height-sm !default;
+$max-gauge-chart-width:         $chart-height-sm !default;
+
+.chart {
+    height: $chart_height;
+    // min-width: map-get($container-max-widths, 'sm');
+    position: relative;
+
+    &__preloader::after {
+        background-color: rgba(255, 255, 255, 0.7);
+        // background-image: url("../../img/preloader.gif");
+        background-position: center;
+        background-repeat: no-repeat;
+        content: "";
+        display: block;
+        left: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: $zindex-dropdown;
+    }
+    &__preloader_hide::after {
+        display: none;
+    }
+}
+
+.chart-lg {
+    height: $chart-height-lg;
+}
+  
+.chart-sm {
+    height: $chart-height-sm;
+}
+
+.gauge-chart {
+    margin: auto;
+    height: $max-gauge-chart-height;
+    width: $max-gauge-chart-width;
+    position: relative;
+
+    &__preloader::after {
+        background-color: rgba(255, 255, 255, 0.7);
+        // background-image: url("../../img/preloader.gif");
+        background-position: center;
+        background-repeat: no-repeat;
+        content: "";
+        display: block;
+        left: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: $zindex-dropdown;
+
+    }
+    &__preloader_hide::after {
+        display: none;
+    }
+}

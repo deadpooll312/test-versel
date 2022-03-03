@@ -1,0 +1,28 @@
+.dashboard-widget {
+    $block: &;
+
+    margin-bottom: map-get($spacers, 3);
+    position: relative;
+
+    #{$block}__configure-btn {
+        color: $secondary;
+        display: none;
+        line-height: 22px;
+        padding: $btn-padding-y;
+        position: absolute;
+        right: 15px;
+        text-align: center;
+        top: 0;
+        z-index: $zindex-dropdown;
+
+        i {
+            width: 22px;
+        }
+    }
+
+    &:hover {
+        #{$block}__configure-btn {
+            display: inline-block;
+        }
+    }
+}

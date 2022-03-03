@@ -103,12 +103,22 @@
           "position": "after"
         },
         {
+          "pattern": "hooks/**",
+          "group": "internal",
+          "position": "after"
+        },
+        {
           "pattern": "components/**",
           "group": "internal",
           "position": "after"
         },
         {
           "pattern": "containers/**",
+          "group": "internal",
+          "position": "after"
+        },
+        {
+          "pattern": "common/**",
           "group": "internal",
           "position": "after"
         },
@@ -166,7 +176,8 @@
     "jsx-a11y/no-static-element-interactions": "off",
     "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "Link" ], "specialLink": [ "to" ] } ],
     "jsx-a11y/label-has-for": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/button-has-type": "off"
   }
 }
 

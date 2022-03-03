@@ -1,0 +1,61 @@
+
+
+.company-card {
+    @extend .card;
+
+    margin-bottom: map-get($spacers, 3);
+    overflow: hidden;
+
+    &_payment_required {
+        border-color: $lightpink !important;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        margin-bottom: map-get($spacers, 2);
+        position: relative;
+    }
+
+    &__name {
+        @extend .h4;
+
+        color: $body-color;
+        display: inline-block;
+    }
+
+    &__account-status {
+        border-radius: $border-radius;
+        display: inline-block;
+        margin-bottom: map-get($spacers, 2);
+        padding: map-get($spacers, 1) / 2 map-get($spacers, 2);
+    }
+
+    @include media-breakpoint-up('sm') {
+        &__account-status {
+            margin-bottom: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    
+    &_payment_required &__account-status {
+        color: color-yiq($danger);
+        background-color: rgba($danger, .7);
+    }
+
+    &__head {
+        @extend .card-body;
+    }
+
+    &_payment_required &__head {
+        background-color: $lightpink;
+    }
+
+    &__body {
+        @extend .card-body;
+    }
+}
